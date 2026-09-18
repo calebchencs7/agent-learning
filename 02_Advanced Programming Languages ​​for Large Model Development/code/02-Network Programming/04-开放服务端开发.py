@@ -14,11 +14,11 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(("0.0.0.0", 7777))
 
 # 启动服务器
-server.listen()
+server.listen()  # 监听端口
 
 # 等待客户端
 while True:
-    client, client_info = server.accept()
+    client, client_info = server.accept()  # accept()方法会阻塞，直到有客户端连接进来
     print(f"客户端{client_info}接入")
     # 发消息给客户端
     client.send("接收到了客户端发的消息".encode("UTF-8"))
