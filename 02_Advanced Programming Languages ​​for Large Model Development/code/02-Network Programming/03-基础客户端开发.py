@@ -12,6 +12,6 @@ recv_data = client.recv(1024)
 print(f"收到服务器的回复：{recv_data.decode('utf-8')}")
 
 # 再发一条
-client.send("我爱宋小佳❤️".encode("UTF-8"))
+client.send("我爱VL❤️".encode("UTF-8"))
 # 4. 关闭
 client.close()  # 背后就是四次挥手
